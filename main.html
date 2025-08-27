@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/5804d39f32.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+    </script>
+    <style>
+      #section1 {
+        height: 600px;
+        background-color: pink;
+      }
+
+      #section2 {
+        height: 600px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <h1><img src="./img/a2287861249_5.jpg" alt="" /></h1>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#games">Games</a>
+        <a href="#galery">Galery</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+    <div class="container" id="games">
+      <div class="ds1">
+        <img src="/img/JxilRmpXkS3CCXUnr0gZTBOlqso3plaw.jpg" alt="" />
+        <h3>
+          Dark Souls, FromSoftware tarafından geliştirilen ve Bandai Namco
+          Entertainment tarafından yayımlanan karanlık fantezi aksiyon-rol yapma
+          oyunu serisidir. Hidetaka Miyazaki tarafından yaratılan seri, 2011'de
+          Dark Souls'un piyasaya sürülmesiyle başladı ve Dark Souls II ve Dark
+          Souls III devam oyunlarıyla genişledi.
+        </h3>
+      </div>
+      <div class="ds1">
+        <img src="/img/ds22.jpg" alt="" />
+        <h3>
+          Dark Souls II, FromSoftware tarafından Microsoft Windows, PlayStation
+          3 ve Xbox 360 için yapılmış bir aksiyon-rol yapma video oyunudur.
+          Oyun, Souls serisinin üçüncü oyunudur. Oyun, zorluk derecesi ile
+          birçok kişi tarafından iyi eleştiriler almıştır.
+        </h3>
+      </div>
+      <div class="ds1">
+        <img src="/img/ds3.avif" alt="" />
+        <h3>
+          Dark Souls III, FromSoftware tarafından geliştirilen ve PlayStation 4,
+          Xbox One ve Microsoft Windows için Bandai Namco Entertainment
+          tarafından yayınlanan bir aksiyon-rol yapma oyunudur. Souls serisinin
+          dördüncü oyunudur ve Dark Souls serisinin üçüncü oyunudur.
+        </h3>
+      </div>
+    </div>
+    <div class="galery" id="galery">
+      <h1>Souls oyunlarinda bezi sekiller</h1>
+      <div class="galery-images">
+        <img src="/img/galeri3.jpg" alt="" />
+        <img src="/img/galeri2.avif" alt="" />
+        <img src="/img/galeri1.jpg" alt="" />
+        <img src="./img/galer4.jpg" alt="" />
+      </div>
+    </div>
+    <div class="music">
+      <h1>Souls oyunlarinin en cox sevilen tema musiqisi</h1>
+      <p>Gwyn, Lord of Cinder</p>
+      <div class="lordcinder">
+        <iframe
+          width="100%"
+          height="500px"
+          src="https://www.youtube.com/embed/Nvv9w-UPuSY?si=aBMsbBR2T0C-7GUq"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    <div class="contact" id="contact">
+      <h1 id="contact">Contact</h1>
+      <form class="contact-form">
+        <input type="text" placeholder="Adınız" required />
+        <input type="email" placeholder="Email Adresiniz" required />
+        <textarea placeholder="Mesajınız..." rows="5" required></textarea>
+        <button type="submit">Gönder</button>
+      </form>
+    </div>
+  </body>
+</html>
